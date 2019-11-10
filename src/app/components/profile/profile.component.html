@@ -1,0 +1,16 @@
+<div *ngIf="user" class="container">
+  <h2 class="page-header"><img src={{user.image}} alt="avatar" height="114px" width="100px"> {{user.fullname}}'s profile</h2>
+  <ul class="list-group">
+    <li class="list-group-item"> <b>Username:</b> {{user.username}}</li>
+    <!-- <li class="list-group-item">Type: {{user.role}}</li> -->
+    <li class="list-group-item"> <b>Email:</b> {{user.email}}</li>
+    <li class="list-group-item"><b>Self description:</b> {{user.message}}</li>
+    <li class="list-group-item"><b>Gender:</b> {{user.gender}}</li>
+    <li class="list-group-item"><b>DOB:</b> {{user.date_of_birth |  date:'yyyy-MM-dd' }}</li>
+    <li class="list-group-item"><b>Proffession:</b> {{user.myProf}}</li>
+    <li class="list-group-item"><b>Interested Proffession:</b> {{user.intProf}}</li>    
+    <li class="list-group-item"><b>User Interests:</b> {{user.interest}}</li>
+ 
+  </ul>
+
+</div>

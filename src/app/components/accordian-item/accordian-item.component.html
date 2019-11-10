@@ -1,0 +1,15 @@
+<div class="accordian-item" [ngClass]="{
+  'accordion-item--isOpen': state == 'isOpen',
+  'accordion-item--isClose': state == 'isClose'
+}">
+  <div class="accordion-item__header" (click)="onClickHeader()">
+    {{ title }}
+  </div>
+  <div class="accordion-item__content" [@accordionItemContentAnimation]="state" >
+    <div *ngFor="let item of settings">
+        <label>{{item.text}}</label>
+        <ui-switch *ngIf="item.type=='switch'" [(ngModel)]="item.value" size="small"></ui-switch>
+        <textarea [(ngModel)]="item.value" *ngIf="item.type=='text'"></textarea>
+    </div>
+  </div>
+</div>
